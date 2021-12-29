@@ -49,7 +49,7 @@ export default function Home() {
     </Box>
     <Box bg='white' padding='10' display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
       <Text fontSize={{ base: '25', md: '30' }} mb='5'>Queremos que seas parte</Text>
-      <Box display='flex'>
+      <Box display='flex' flexDirection={{ base: 'column', md: 'row' }}>
         <Box textAlign='center' borderRight={{ base: 'none', md: '1px solid #c0c0c0' }}  padding={{ base: '0', md: '10px 70px 10px 10px' }}>
           <Text mb='2' fontSize='20'>CIVIL</Text>
           <Text>Viernes 7 de Enero - 14:00 PM</Text>
