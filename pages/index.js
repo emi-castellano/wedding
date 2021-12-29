@@ -64,7 +64,7 @@ export default function Home() {
       <Link mt='5' textDecoration='underline' href='https://goo.gl/maps/xm8dgn2kfkE7vLAP6' isExternal>Mapa</Link>
     </Box>
     <Box bg='#c9c293' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
-      <Text fontSize='25' mb='5'>Cuenta regresiva</Text>
+      <Text fontSize='25' mb='5'>Solo faltan</Text>
       {partyTime ? (
         <Text fontSize='30'>Empezó 🎉</Text>
       ) : <Box display='flex'>
