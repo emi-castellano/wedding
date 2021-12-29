@@ -47,24 +47,30 @@ export default function Home() {
         <Text color='white' fontSize='30'>07.01.2022</Text>
       </Box>
     </Box>
-    <Box bg='white' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
-      <Text fontSize='25' mb='5'>Queremos que seas parte</Text>
-      <Text fontSize='20'>CIVIL</Text>
-      <Text>Viernes 7 de Enero - 14:00 PM</Text>
-      <Text>Casa de la Cultura</Text>
-      <Text>18 de Julio 820</Text>
-      <Text>San Carlos, Maldonado</Text>
-      <Link mt='5' textDecoration='underline' href='https://goo.gl/maps/gJGCLDgyizxha1C47' isExternal>Mapa</Link>
-      <Box borderBottom='1px solid #c0c0c0' w='100%' marginY='5' display='flex' h='1' />
-      <Text fontSize='20'>CELEBRACIÓN CIVIL</Text>
-      <Text>Viernes 7 de Enero - 19:00 PM</Text>
-      <Text>Ejido y Ubaldina Maurente</Text>
-      <Text>San Carlos, Maldonado</Text>
-      <Text>Confirmar asistencia</Text>
-      <Link mt='5' textDecoration='underline' href='https://goo.gl/maps/xm8dgn2kfkE7vLAP6' isExternal>Mapa</Link>
+    <Box bg='white' padding='10' display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
+      <Text fontSize={{ base: '25', md: '30' }} mb='5'>Queremos que seas parte</Text>
+      <Box display='flex'>
+        <Box textAlign='center' borderRight={{ base: 'none', md: '1px solid #c0c0c0' }}  padding={{ base: '0', md: '10px 70px 10px 10px' }}>
+          <Text mb='2' fontSize='20'>CIVIL</Text>
+          <Text>Viernes 7 de Enero - 14:00 PM</Text>
+          <Text>Casa de la Cultura</Text>
+          <Text>18 de Julio 820</Text>
+          <Text>San Carlos, Maldonado</Text>
+          <Link  mt='5' display='block' textDecoration='underline' href='https://goo.gl/maps/gJGCLDgyizxha1C47' isExternal>Mapa</Link>
+        </Box>
+        <Box display={{ base: 'flex', md: 'none', xl: 'none' }} borderBottom='1px solid #c0c0c0' w='100%' marginY='5' h='1' />
+        <Box textAlign='center' padding={{ base: '0', md: '10px 10px 10px 70px' }}>
+          <Text mb='2' fontSize='20'>CELEBRACIÓN CIVIL</Text>
+          <Text>Viernes 7 de Enero - 19:00 PM</Text>
+          <Text>Ejido y Ubaldina Maurente</Text>
+          <Text>San Carlos, Maldonado</Text>
+          <Text>Confirmar asistencia</Text>
+          <Link mt='5' display='block' textDecoration='underline' href='https://goo.gl/maps/xm8dgn2kfkE7vLAP6' isExternal>Mapa</Link>
+        </Box>
+      </Box>
     </Box>
     <Box bg='#c9c293' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
-      <Text fontSize='25' mb='5'>Solo faltan</Text>
+      <Text fontSize={{ base: '25', md: '35' }} mb='5'>Solo faltan</Text>
       {partyTime ? (
         <Text fontSize='30'>Empezó 🎉</Text>
       ) : <Box display='flex'>
@@ -96,7 +102,7 @@ export default function Home() {
     </Box>
     <Image boxSize="100%" objectFit="cover" src="photo3-copy.jpeg" alt="Foto dos" />
     <Box bg='white' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
-      <Text fontSize='25' mb='5'>Colectivo</Text>
+      <Text fontSize={{ base: '25', md: '35' }} mb='5'>Colectivo</Text>
       <Box display='flex' alignItems='center' flexDirection='column'>
         <Text>CAJA AHORRO USD - Itaú</Text>
         <Text>Emiliano Castellano</Text>
@@ -111,8 +117,8 @@ export default function Home() {
     </Box>
     <Image boxSize="100%" objectFit="cover" src="photo5.jpeg" alt="Foto dos" />
     <Box bg='white' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center' textAlign='center'>
-      <Text fontSize='25'>#Bel&Emi</Text>
-      <Text>Etiquétanos en Instagram con nuestro hashtag en fotos y videos</Text>
+      <Text fontSize={{ base: '25', md: '35' }}>#Bel&Emi</Text>
+      <Text fontSize={{ base: '16', md: '18' }}>Etiquétanos en Instagram con nuestro hashtag en fotos y videos</Text>
     </Box>
     <Carousel infiniteLoop renderThumbs={() => {}}>
       <Box w='100%'>
@@ -141,7 +147,7 @@ export default function Home() {
       </Box>
     </Carousel>
     <Box bg='white' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
-      <Text fontSize='25'>EL AMOR ES LA CURA</Text>
+      <Text fontSize={{ base: '25', md: '35' }}>EL AMOR ES LA CURA</Text>
     </Box>
   </Layout>
 }
