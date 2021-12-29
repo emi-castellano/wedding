@@ -1,8 +1,44 @@
+import { useState, useEffect } from 'react'
 import { Box, Text, Link, Image } from '@chakra-ui/react'
 import Layout from '../components/Layout'
 import { Carousel } from 'react-responsive-carousel'
 
 export default function Home() {
+  const [partyTime, setPartyTime] = useState(false)
+  const [days, setDays] = useState(0)
+  const [hours, setHours] = useState(0)
+  const [minutes, setMinutes] = useState(0)
+  const [seconds, setSeconds] = useState(0)
+
+  useEffect(() => {
+    const target = new Date("1/7/2022 13:59:59")
+
+    const interval = setInterval(() => {
+      const now = new Date()
+      const difference = target.getTime() - now.getTime()
+
+      const d = Math.floor(difference / (1000 * 60 * 60 * 24))
+      setDays(d)
+
+      const h = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      )
+      setHours(h)
+
+      const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+      setMinutes(m)
+
+      const s = Math.floor((difference % (1000 * 60)) / 1000)
+      setSeconds(s)
+
+      if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
+        setPartyTime(true)
+      }
+    }, 1000);
+
+    return () => clearInterval(interval)
+  }, [])
+
   return <Layout title='Bel&Emi'>
     <Box height='100vh' bgImage="linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('photo2.jpeg')" bgRepeat='no-repeat' bgSize='cover' bgPosition='right'>
       <Box height='100%' display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
@@ -14,22 +50,49 @@ export default function Home() {
     <Box bg='white' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
       <Text fontSize='25' mb='5'>Queremos que seas parte</Text>
       <Text fontSize='20'>CIVIL</Text>
-      <Text>14:00 PM</Text>
+      <Text>Viernes 7 de Enero - 14:00 PM</Text>
       <Text>Casa de la Cultura</Text>
       <Text>18 de Julio 820</Text>
       <Text>San Carlos, Maldonado</Text>
       <Link mt='5' textDecoration='underline' href='https://goo.gl/maps/gJGCLDgyizxha1C47' isExternal>Mapa</Link>
       <Box borderBottom='1px solid #c0c0c0' w='100%' marginY='5' display='flex' h='1' />
       <Text fontSize='20'>CELEBRACIÓN CIVIL</Text>
-      <Text>19:00 PM</Text>
+      <Text>Viernes 7 de Enero - 19:00 PM</Text>
       <Text>Ejido y Ubaldina Maurente</Text>
       <Text>San Carlos, Maldonado</Text>
       <Text>Confirmar asistencia</Text>
       <Link mt='5' textDecoration='underline' href='https://goo.gl/maps/xm8dgn2kfkE7vLAP6' isExternal>Mapa</Link>
     </Box>
-    <Box bg='#f2f2f2' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
-      <Text fontSize='25'>Cuenta regresiva</Text>
-      <Text>Timer</Text>
+    <Box bg='#c6b0fa' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
+      <Text fontSize='25' mb='5'>Cuenta regresiva</Text>
+      {partyTime ? (
+        <Text fontSize='30'>Empezó 🎉</Text>
+      ) : <Box display='flex'>
+        <Box display='flex' alignItems='center' justifyContent='center' flexDirection='column' paddingRight='3'>
+          <Box borderRadius='50%' h='50px' w='50px' bg='white' display='flex' alignItems='center' justifyContent='center'>
+            <Text fontSize='20'>{days}</Text>
+          </Box>
+          <Text mt='1' fontSize='14'>días</Text>
+        </Box>
+        <Box display='flex' alignItems='center' justifyContent='center' flexDirection='column' paddingRight='3'>
+          <Box borderRadius='50%' h='50px' w='50px' bg='white' display='flex' alignItems='center' justifyContent='center'>
+            <Text fontSize='20'>{hours}</Text>
+          </Box>
+          <Text mt='1' fontSize='14'>horas</Text>
+        </Box>
+        <Box display='flex' alignItems='center' justifyContent='center' flexDirection='column' paddingRight='3'>
+          <Box borderRadius='50%' h='50px' w='50px' bg='white' display='flex' alignItems='center' justifyContent='center'>
+            <Text fontSize='20'>{minutes}</Text>
+          </Box>
+          <Text mt='1' fontSize='14'>minutos</Text>
+        </Box>
+        <Box display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
+          <Box borderRadius='50%' h='50px' w='50px' bg='white' display='flex' alignItems='center' justifyContent='center'>
+            <Text fontSize='20'>{seconds}</Text>
+          </Box>
+          <Text mt='1' fontSize='14'>segundos</Text>
+        </Box>
+      </Box>}
     </Box>
     <Image boxSize="100%" objectFit="cover" src="photo3-copy.jpeg" alt="Foto dos" />
     <Box bg='white' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
