@@ -11,7 +11,7 @@ export default function Home() {
   const [seconds, setSeconds] = useState(0)
 
   useEffect(() => {
-    const target = new Date("1/7/2022 13:59:59")
+    const target = new Date("04/2/2022 16:59:59")
 
     const interval = setInterval(() => {
       const now = new Date()
@@ -43,33 +43,32 @@ export default function Home() {
     <Box height='100vh' bgImage="linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('photo2.jpeg')" bgRepeat='no-repeat' bgSize='cover' bgPosition='right'>
       <Box height='100%' display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
         <Text color='white' fontSize='55' mb='410'>Bel & Emi</Text>
-        <Text color='white' fontSize='35'>Nos casamos</Text>
-        <Text color='white' fontSize='30'>07.01.2022</Text>
+        <Text color='white' fontSize='35'>Nuestro festejo</Text>
+        <Text color='white' fontSize='30'>02.04.2022</Text>
       </Box>
     </Box>
     <Box bg='white' padding='10' display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
       <Text fontSize={{ base: '25', md: '30' }} mb='5'>Queremos que seas parte</Text>
       <Box display='flex' flexDirection={{ base: 'column', md: 'row' }}>
-        <Box textAlign='center' borderRight={{ base: 'none', md: '1px solid #c0c0c0' }}  padding={{ base: '0', md: '10px 70px 10px 10px' }}>
-          <Text mb='2' fontSize='20'>CIVIL</Text>
-          <Text>Viernes 7 de Enero - 14:00 PM</Text>
-          <Text>Casa de la Cultura</Text>
-          <Text>18 de Julio 820</Text>
-          <Text>San Carlos, Maldonado</Text>
-          <Link  mt='5' display='block' textDecoration='underline' href='https://goo.gl/maps/gJGCLDgyizxha1C47' isExternal>Mapa</Link>
-        </Box>
-        <Box display={{ base: 'flex', md: 'none', xl: 'none' }} borderBottom='1px solid #c0c0c0' w='100%' marginY='5' h='1' />
-        <Box textAlign='center' padding={{ base: '0', md: '10px 10px 10px 70px' }}>
-          <Text mb='2' fontSize='20'>CELEBRACIÓN CIVIL</Text>
-          <Text>Viernes 7 de Enero - 19:00 PM</Text>
-          <Text>Ejido y Ubaldina Maurente</Text>
-          <Text>San Carlos, Maldonado</Text>
-          <Text>Confirmar asistencia</Text>
-          <Link mt='5' display='block' textDecoration='underline' href='https://goo.gl/maps/xm8dgn2kfkE7vLAP6' isExternal>Mapa</Link>
+        <Box textAlign='center' padding={{ base: '0', md: '10px 70px 10px 10px' }}>
+          <Text mb='2' fontSize='20'>LA FIESTA</Text>
+          <Text>Sábado 2 de Abril - 17:00 PM</Text>
+          <Text>Pueblo Coyote</Text>
+          <Text>Ruta 104 km 1,5 Mangrullos de Punta Piedras</Text>
+          <Text>Manantiales, Punta del Este</Text>
+          <Link  mt='5' display='block' textDecoration='underline' href='https://goo.gl/maps/GsVJJSqwAirRoHEF8' isExternal>Mapa</Link>
         </Box>
       </Box>
     </Box>
-    <Box bg='#c9c293' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
+    <Box bgImage="url('mapa.png')" bgRepeat="no-repeat" bgSize='cover' bgPosition='center' height={{ base: '400px', md: '400px', lg: '750px' }} />
+    <Box bg='white' padding='10' display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
+      <Text fontSize={{ base: '25', md: '30' }} textAlign='center' mb='5'>Dress code - Formal</Text>
+      <Box textAlign='center' padding={{ base: '0', md: '10px 70px 10px 10px', lg: '0' }}>
+        <Text>Prepárate para una noche única.</Text>
+        <Text>El autoestima en el cielo y el perreo hasta el suelo.</Text>
+      </Box>
+    </Box>
+    <Box bg='#73e4c0' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
       <Text fontSize={{ base: '25', md: '35' }} mb='5'>Solo faltan</Text>
       {partyTime ? (
         <Text fontSize='30'>Empezó 🎉</Text>
@@ -117,15 +116,14 @@ export default function Home() {
     </Box>
     <Image boxSize="100%" objectFit="cover" src="photo5.jpeg" alt="Foto dos" />
     <Box bg='white' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center' textAlign='center'>
-      <Text fontSize={{ base: '25', md: '35' }}>#Bel&Emi</Text>
-      <Text fontSize={{ base: '16', md: '18' }}>Etiquétanos en Instagram con nuestro hashtag en fotos y videos</Text>
+      <Text fontSize={{ base: '16', md: '18' }}>Estamos muy contentos de celebrar nuestro amor con ustedes, por favor, confírmanos tu asistencia.</Text>
     </Box>
     <Carousel infiniteLoop renderThumbs={() => {}}>
       <Box w='100%'>
-        <Image src="photo7.jpeg" alt='Carousel 1' />
+        <Image src="photo14.jpg" alt='Carousel 1' />
       </Box>
       <Box w='100%'>
-        <Image src="photo4.jpeg" alt='Carousel 2' />
+        <Image src="photo15.jpg" alt='Carousel 2' />
       </Box>
       <Box w='100%'>
         <Image src="photo8.jpeg" alt='Carousel 3' />
@@ -134,16 +132,16 @@ export default function Home() {
         <Image src="photo10.jpeg" alt='Carousel 4' />
       </Box>
       <Box w='100%'>
-        <Image src="photo11.jpeg" alt='Carousel 5' />
+        <Image src="photo19.jpeg" alt='Carousel 5' />
       </Box>
       <Box w='100%'>
         <Image src="photo12.jpeg" alt='Carousel 6' />
       </Box>
       <Box w='100%'>
-        <Image src="photo13.jpeg" alt='Carousel 7' />
+        <Image src="photo17.jpg" alt='Carousel 7' />
       </Box>
       <Box w='100%'>
-        <Image src="photo14.jpeg" alt='Carousel 8' />
+        <Image src="photo18.jpg" alt='Carousel 8' />
       </Box>
     </Carousel>
     <Box bg='white' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
