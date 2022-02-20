@@ -52,9 +52,9 @@ export default function Home() {
       <Box display='flex' flexDirection={{ base: 'column', md: 'row' }}>
         <Box textAlign='center' padding={{ base: '0', md: '10px 70px 10px 10px' }}>
           <Text mb='2' fontSize='20'>LA FIESTA</Text>
-          <Text>Sábado 2 de Abril - 17:00 PM</Text>
+          <Text>Sábado 2 de Abril - 17:00 hs</Text>
           <Text>Pueblo Coyote</Text>
-          <Text>Ruta 104 km 1,5 Mangrullos de Punta Piedras</Text>
+          <Text>Ruta 104 km 1,5 - Mangrullos de Punta Piedras</Text>
           <Text>Manantiales, Punta del Este</Text>
           <Link  mt='5' display='block' textDecoration='underline' href='https://goo.gl/maps/GsVJJSqwAirRoHEF8' isExternal>Mapa</Link>
         </Box>
