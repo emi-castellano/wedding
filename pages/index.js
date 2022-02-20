@@ -40,7 +40,7 @@ export default function Home() {
   }, [])
 
   return <Layout title='Bel&Emi'>
-    <Box height='100vh' bgImage="linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('photo2.jpeg')" bgRepeat='no-repeat' bgSize='cover' bgPosition='right'>
+    <Box height='100vh' bgImage="linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url('photo14-copy.jpg')" bgRepeat='no-repeat' bgSize='cover' bgPosition='center'>
       <Box height='100%' display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
         <Text color='white' fontSize='55' mb='410'>Bel & Emi</Text>
         <Text color='white' fontSize='35'>Nuestro festejo</Text>
@@ -62,14 +62,14 @@ export default function Home() {
     </Box>
     <Box bgImage="url('mapa.png')" bgRepeat="no-repeat" bgSize='cover' bgPosition='center' height={{ base: '400px', md: '400px', lg: '750px' }} />
     <Box bg='white' padding='10' display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
-      <Text fontSize={{ base: '25', md: '30' }} textAlign='center' mb='5'>Dress code - Formal</Text>
+      <Text fontSize={{ base: '25', md: '30' }} textAlign='center' mb='5'>Vestimenta formal</Text>
       <Box textAlign='center' padding={{ base: '0', md: '10px 70px 10px 10px', lg: '0' }}>
-        <Text>Prepárate para una noche única.</Text>
+        <Text>Prepárate para una noche única!</Text>
         <Text>El autoestima en el cielo y el perreo hasta el suelo.</Text>
       </Box>
     </Box>
-    <Box bg='#73e4c0' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
-      <Text fontSize={{ base: '25', md: '35' }} mb='5'>Solo faltan</Text>
+    <Box bg='#7e9472' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
+      <Text color="white" fontWeight='bold' fontSize={{ base: '25', md: '35' }} mb='5'>Solo faltan</Text>
       {partyTime ? (
         <Text fontSize='30'>Empezó 🎉</Text>
       ) : <Box display='flex'>
@@ -77,35 +77,35 @@ export default function Home() {
           <Box borderRadius='50%' h='50px' w='50px' bg='white' display='flex' alignItems='center' justifyContent='center'>
             <Text fontSize='20'>{days}</Text>
           </Box>
-          <Text mt='1' fontSize='14'>días</Text>
+          <Text color="white" mt='1' fontSize='14'>días</Text>
         </Box>
         <Box display='flex' alignItems='center' justifyContent='center' flexDirection='column' paddingRight='3'>
           <Box borderRadius='50%' h='50px' w='50px' bg='white' display='flex' alignItems='center' justifyContent='center'>
             <Text fontSize='20'>{hours}</Text>
           </Box>
-          <Text mt='1' fontSize='14'>horas</Text>
+          <Text color="white" mt='1' fontSize='14'>horas</Text>
         </Box>
         <Box display='flex' alignItems='center' justifyContent='center' flexDirection='column' paddingRight='3'>
           <Box borderRadius='50%' h='50px' w='50px' bg='white' display='flex' alignItems='center' justifyContent='center'>
             <Text fontSize='20'>{minutes}</Text>
           </Box>
-          <Text mt='1' fontSize='14'>minutos</Text>
+          <Text color="white" mt='1' fontSize='14'>minutos</Text>
         </Box>
         <Box display='flex' alignItems='center' justifyContent='center' flexDirection='column'>
           <Box borderRadius='50%' h='50px' w='50px' bg='white' display='flex' alignItems='center' justifyContent='center'>
             <Text fontSize='20'>{seconds}</Text>
           </Box>
-          <Text mt='1' fontSize='14'>segundos</Text>
+          <Text color="white" mt='1' fontSize='14'>segundos</Text>
         </Box>
       </Box>}
     </Box>
     <Image boxSize="100%" objectFit="cover" src="photo3-copy.jpeg" alt="Foto dos" />
     <Box bg='white' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
-      <Text fontSize={{ base: '25', md: '35' }} mb='5'>Colectivo</Text>
+      <Text fontSize={{ base: '25', md: '35' }} mb='5' fontWeight='bold'>Colectivo</Text>
       <Box display='flex' alignItems='center' flexDirection='column'>
         <Text>CAJA AHORRO USD - Itaú</Text>
-        <Text>Emiliano Castellano</Text>
-        <Text>7134933</Text>
+        <Text>María Belén Noguez</Text>
+        <Text>0465224</Text>
       </Box>
       <Box borderBottom='1px solid #c0c0c0' w='100%' marginY='5' display='flex' h='1' />
       <Box display='flex' alignItems='center' flexDirection='column'>
@@ -116,36 +116,31 @@ export default function Home() {
     </Box>
     <Image boxSize="100%" objectFit="cover" src="photo5.jpeg" alt="Foto dos" />
     <Box bg='white' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center' textAlign='center'>
-      <Text fontSize={{ base: '16', md: '18' }}>Estamos muy contentos de celebrar nuestro amor con ustedes, por favor, confírmanos tu asistencia.</Text>
+      <Text fontSize="18px">Estamos felices de celebrar nuestro amor con ustedes.</Text>
+      <Text fontSize='18px'>Por favor, confírmanos tu asistencia.</Text>
     </Box>
     <Carousel infiniteLoop renderThumbs={() => {}}>
       <Box w='100%'>
-        <Image src="photo14.jpg" alt='Carousel 1' />
-      </Box>
-      <Box w='100%'>
-        <Image src="photo15.jpg" alt='Carousel 2' />
+        <Image src="photo19.jpeg" alt='Carousel 6' />
       </Box>
       <Box w='100%'>
         <Image src="photo8.jpeg" alt='Carousel 3' />
       </Box>
       <Box w='100%'>
+        <Image src="photo18.jpg" alt='Carousel 8' />
+      </Box>
+      <Box w='100%'>
         <Image src="photo10.jpeg" alt='Carousel 4' />
       </Box>
       <Box w='100%'>
-        <Image src="photo19.jpeg" alt='Carousel 5' />
+        <Image src="photo4.jpeg" alt='Carousel 5' />
       </Box>
       <Box w='100%'>
-        <Image src="photo12.jpeg" alt='Carousel 6' />
-      </Box>
-      <Box w='100%'>
-        <Image src="photo17.jpg" alt='Carousel 7' />
-      </Box>
-      <Box w='100%'>
-        <Image src="photo18.jpg" alt='Carousel 8' />
+        <Image src="photo12.jpeg" alt='Carousel 7' />
       </Box>
     </Carousel>
-    <Box bg='white' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
-      <Text fontSize={{ base: '25', md: '35' }}>EL AMOR ES LA CURA</Text>
+    <Box bg='#7e9472' marginTop="-10px" padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
+      <Text fontWeight="bold" color='white' fontSize={{ base: '25', md: '35' }}>EL AMOR ES LA CURA</Text>
     </Box>
   </Layout>
 }
