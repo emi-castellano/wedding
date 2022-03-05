@@ -87,7 +87,7 @@ export default function Home() {
             <AlertDialogCloseButton />
             <AlertDialogBody>
               <Text mb="10px">Te queremos aclarar algo importante:</Text>
-              <Text mb="10px">El lugar del evento tiene dos entradas similares, ambas tienen un cartel de <strong>"Mangrullos de Punta Piedra"</strong> (ver foto)</Text>
+              <Text mb="10px">{`El lugar del evento tiene dos entradas similares, ambas tienen un cartel de <strong>"Mangrullos de Punta Piedra"</strong> (ver foto)`}</Text>
               <Text mb="20px">- Si vienes desde San Carlos, debes tomar la segunda entrada (a mano izquierda).</Text>
               <Text mb="15px">- Si vienes desde La Barra/Manantiales/Punta del Este, debes tomar la primer entrada (a mano derecha).</Text>
               <Box bgImage="url('entrada.png')" bgRepeat="no-repeat" bgSize='cover' bgPosition='center' height={{ base: '350px', md: '3500px', lg: '750px' }} />
