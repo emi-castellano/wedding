@@ -1,5 +1,19 @@
-import { useState, useEffect } from 'react'
-import { Box, Text, Link, Image } from '@chakra-ui/react'
+import { useState, useEffect, useRef } from 'react'
+import { 
+  Box,
+  Text, 
+  Link,
+  Image, 
+  Button,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+  useDisclosure,
+  AlertDialogCloseButton
+} from '@chakra-ui/react'
 import Layout from '../components/Layout'
 import { Carousel } from 'react-responsive-carousel'
 
@@ -9,6 +23,8 @@ export default function Home() {
   const [hours, setHours] = useState(0)
   const [minutes, setMinutes] = useState(0)
   const [seconds, setSeconds] = useState(0)
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const cancelRef = useRef()
 
   useEffect(() => {
     const target = new Date("04/2/2022 16:59:59")
@@ -53,10 +69,36 @@ export default function Home() {
         <Box textAlign='center' padding={{ base: '0', md: '10px 70px 10px 10px' }}>
           <Text mb='2' fontSize='20'>LA FIESTA</Text>
           <Text>Sábado 2 de Abril - 17:00 hs</Text>
-          <Text>Pueblo Coyote</Text>
+          <Text fontWeight="bold">Pueblo Coyote</Text>
           <Text>Ruta 104 km 1,5 - Mangrullos de Punta Piedras</Text>
           <Text>Manantiales, Punta del Este</Text>
-          <Link  mt='5' display='block' textDecoration='underline' href='https://goo.gl/maps/GsVJJSqwAirRoHEF8' isExternal>Mapa</Link>
+          <Link  mt='5' display='block' textDecoration='underline' href='https://goo.gl/maps/GsVJJSqwAirRoHEF8' isExternal>Ver mapa</Link>
+          <Button mt="20px" variant="outline" onClick={() => onOpen(true)}>Ver información adicional</Button>
+          <AlertDialog
+            motionPreset='slideInBottom'
+            leastDestructiveRef={cancelRef}
+            onClose={onClose}
+            isOpen={isOpen}
+            isCentered
+          >
+          <AlertDialogOverlay />
+          <AlertDialogContent>
+            <AlertDialogHeader>Información adicional</AlertDialogHeader>
+            <AlertDialogCloseButton />
+            <AlertDialogBody>
+              <Text mb="10px">Te queremos aclarar algo importante:</Text>
+              <Text mb="10px">El lugar del evento tiene dos entradas similares, ambas tienen un cartel de <strong>"Mangrullos de Punta Piedra"</strong> (ver foto)</Text>
+              <Text mb="20px">- Si vienes desde San Carlos, debes tomar la segunda entrada (a mano izquierda).</Text>
+              <Text mb="15px">- Si vienes desde La Barra/Manantiales/Punta del Este, debes tomar la primer entrada (a mano derecha).</Text>
+              <Box bgImage="url('entrada.png')" bgRepeat="no-repeat" bgSize='cover' bgPosition='center' height={{ base: '350px', md: '3500px', lg: '750px' }} />
+            </AlertDialogBody>
+            <AlertDialogFooter>
+              <Button ref={cancelRef} onClick={onClose}>
+                Cerrar
+              </Button>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
         </Box>
       </Box>
     </Box>
