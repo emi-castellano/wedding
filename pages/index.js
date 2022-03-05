@@ -85,11 +85,10 @@ export default function Home() {
             <AlertDialogHeader>Información adicional</AlertDialogHeader>
             <AlertDialogCloseButton />
             <AlertDialogBody>
-              <Text mb="5px">Te queremos aclarar algo importante:</Text>
-              <Text mb="10px">El lugar tiene dos entradas como las de la foto. Por eso, debes tener en cuenta lo siguiente:</Text>
-              <Text mb="10px">- Desde San Carlos, tomar la segunda entrada (a mano izquierda).</Text>
-              <Text mb="15px">- Desde Manantiales, tomar la primer entrada (a mano derecha).</Text>
-              <Box bgImage="url('entrada.png')" bgRepeat="no-repeat" bgSize='cover' bgPosition='center' height={{ base: '310px', md: '310px', lg: '310' }} />
+              <Text mb="10px">El lugar tiene dos entradas como la de la foto. Por eso, debes tener en cuenta lo siguiente:</Text>
+              <Text mb="5px">- Yendo desde San Carlos, tomar la segunda entrada (a mano izquierda).</Text>
+              <Text mb="5px">- Yendo desde Manantiales, tomar la primer entrada (a mano derecha).</Text>
+              <Box bgImage="url('entrada.png')" bgRepeat="no-repeat" bgSize='cover' bgPosition='center' height={{ base: '250px', md: '250px', lg: '310px' }} />
             </AlertDialogBody>
             <AlertDialogFooter>
               <Button ref={cancelRef} onClick={onClose}>
