@@ -75,7 +75,6 @@ export default function Home() {
           <Link  mt='5' display='block' textDecoration='underline' href='https://goo.gl/maps/GsVJJSqwAirRoHEF8' isExternal>Ver mapa</Link>
           <Button mt="20px" variant="outline" onClick={() => onOpen(true)}>Ver información adicional</Button>
           <AlertDialog
-            motionPreset='slideInBottom'
             leastDestructiveRef={cancelRef}
             onClose={onClose}
             isOpen={isOpen}
@@ -86,11 +85,11 @@ export default function Home() {
             <AlertDialogHeader>Información adicional</AlertDialogHeader>
             <AlertDialogCloseButton />
             <AlertDialogBody>
-              <Text mb="10px">Te queremos aclarar algo importante:</Text>
-              <Text mb="10px">{`El lugar del evento tiene dos entradas similares, ambas tienen un cartel de <strong>"Mangrullos de Punta Piedra"</strong> (ver foto)`}</Text>
-              <Text mb="20px">- Si vienes desde San Carlos, debes tomar la segunda entrada (a mano izquierda).</Text>
-              <Text mb="15px">- Si vienes desde La Barra/Manantiales/Punta del Este, debes tomar la primer entrada (a mano derecha).</Text>
-              <Box bgImage="url('entrada.png')" bgRepeat="no-repeat" bgSize='cover' bgPosition='center' height={{ base: '350px', md: '3500px', lg: '750px' }} />
+              <Text mb="5px">Te queremos aclarar algo importante:</Text>
+              <Text mb="10px">El lugar tiene dos entradas como las de la foto. Por eso, debes tener en cuenta lo siguiente:</Text>
+              <Text mb="10px">- Desde San Carlos, tomar la segunda entrada (a mano izquierda).</Text>
+              <Text mb="15px">- Desde Manantiales, tomar la primer entrada (a mano derecha).</Text>
+              <Box bgImage="url('entrada.png')" bgRepeat="no-repeat" bgSize='cover' bgPosition='center' height={{ base: '310px', md: '310px', lg: '310' }} />
             </AlertDialogBody>
             <AlertDialogFooter>
               <Button ref={cancelRef} onClick={onClose}>
