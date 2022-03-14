@@ -105,7 +105,7 @@ export default function Home() {
       <Text fontSize={{ base: '25', md: '30' }} textAlign='center' mb='5'>Vestimenta formal</Text>
       <Box textAlign='center' padding={{ base: '0', md: '10px 70px 10px 10px', lg: '0' }}>
         <Text>Prepárate para una noche única!</Text>
-        <Text>El autoestima en el cielo y el perreo hasta el suelo.</Text>
+        <Text>La autoestima en el cielo y el perreo hasta el suelo.</Text>
       </Box>
     </Box>
     <Box bg='#7e9472' padding='10' display='flex' justifyContent='center' flexDirection='column' alignItems='center'>
